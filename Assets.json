@@ -1,6 +1,23 @@
 [
-    {
-        "inputs": [ "Assets/Styles.less" ],
-        "output": "Styles/Styles.css"
-    }
+  {
+    "inputs": [
+      "Assets/main-dark.less"
+    ],
+    "watch": [
+      "Assets/main.less",
+      "Content/boostrap/**/*.less"
+    ],
+    "output": "Styles/main-dark.css"
+  },
+
+  {
+    "inputs": [
+      "Assets/main-light.less"
+    ],
+    "watch": [
+      "Assets/main.less",
+      "Content/boostrap/**/*.less"
+    ],
+    "output": "Styles/main-light.css"
+  }
 ]

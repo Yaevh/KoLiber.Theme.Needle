@@ -148,6 +148,9 @@
     <Content Include="Content\bootstrap\bootstrap.less" />
     <Content Include="Content\bootstrap\badges.less" />
     <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Assets\main-dark.less" />
+    <Content Include="Assets\main-light.less" />
+    <Content Include="Assets\main.less" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -157,7 +160,6 @@
     <Content Include="Assets.json" />
     <Content Include="Scripts\Web.config" />
     <Content Include="Styles\Web.config" />
-    <Content Include="Assets\Styles.less" />
     <Content Include="Placement.info" />
     <Content Include="Content\Web.config" />
     <Content Include="Theme.txt" />
