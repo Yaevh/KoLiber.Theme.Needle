@@ -5,7 +5,7 @@
     ],
     "watch": [
       "Assets/main.less",
-      "Content/boostrap/**/*.less"
+      "Assets/boostrap/**/*.less"
     ],
     "output": "Styles/main-dark.css"
   },
@@ -16,7 +16,7 @@
     ],
     "watch": [
       "Assets/main.less",
-      "Content/boostrap/**/*.less"
+      "Assets/boostrap/**/*.less"
     ],
     "output": "Styles/main-light.css"
   }
