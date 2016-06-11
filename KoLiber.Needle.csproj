@@ -156,6 +156,10 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Styles\main-dark.css" />
+    <Content Include="Styles\main-dark.min.css" />
+    <Content Include="Styles\main-light.css" />
+    <Content Include="Styles\main-light.min.css" />
     <Content Include="Web.config" />
     <Content Include="Assets.json" />
     <Content Include="Scripts\Web.config" />
