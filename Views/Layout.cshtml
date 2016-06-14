@@ -55,18 +55,27 @@
     var tag = Tag(Model, "div"); // using Tag so the layout div gets the classes, id and other attributes added to the Model
 }
 @tag.StartElement
-@if (Model.Header != null) {
-<header id="layout-header" class="group">
-    <div id="header">
-        @Zone(Model.Header)
+
+<header class="banner" role="banner">
+    <div class="container">
+        @if (Model.Banner != null)
+        {
+            <div class="row">
+                <header id="layout-header" class="group">
+                    <div id="header">
+                        @Zone(Model.Banner)
+                    </div>
+                </header>
+            </div>
+        }
+
+        @if (Model.Navigation != null)
+        {
+            @Zone(Model.Navigation)
+        }
     </div>
 </header>
-}
-@if (Model.Navigation != null) {
-<div id="layout-navigation" class="group">
-    @Zone(Model.Navigation)
-</div>
-}
+
 @if (Model.Featured != null) {
 <div id="layout-featured" class="group">
     @Zone(Model.Featured)
