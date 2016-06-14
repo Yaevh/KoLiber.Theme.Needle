@@ -1,0 +1,24 @@
+@{
+    Model.Id = string.Concat("zone-", Model.Hint.ToLowerInvariant());
+    var tag = Tag(Model, "section");
+}
+
+@tag.StartElement
+    <div class="navbar navbar-default navbar-static-top affix" data-spy="affix" data-offset-top="100">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="@WorkContext.CurrentSite.BaseUrl" data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" class="navbar-brand">
+                <span class="glyphicon glyphicon-home"></span>
+                <span class="visible-inline-xs">&nbsp;&nbsp;Stowarzyszenie KoLiber</span>
+            </a>
+        </div>
+
+        @DisplayChildren(Model)
+
+    </div>
+@tag.EndElement

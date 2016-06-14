@@ -3,5 +3,6 @@ Author: Tomasz Malinowski
 Website: http://KoLiber.org
 Description: Base theme for KoLiber.org. Originally designed by Miłosz Lodowski and implemented by Mateusz Kwapich. Ported from Wordpress by Tomasz Malinowski.
 Version: 0.01
+Zones: Header, Navigation, Featured, BeforeMain, AsideFirst, Messages, BeforeContent, Content, AfterContent, AsideSecond, AfterMain, TripelFirst, TripelSecond, TripelThird, FooterQuadFirst, FooterQuadSecond, FooterQuadThird, Footer
 # todo: provide tags
 # Tags: Classic, Serif

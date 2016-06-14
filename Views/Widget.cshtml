@@ -1,0 +1,24 @@
+﻿@using Orchard.ContentManagement
+@using Orchard.Widgets.Models
+@{
+    // By default Orchard wraps up templates in some wrapping tags. We want to style our widget ourselves
+    // and include the title in it, so we need to clear the default wrapper.
+    // See http://stackoverflow.com/questions/7870349/how-to-style-a-widget-in-orchard for details.
+    IList<string> wrappers = Model.Metadata.Wrappers as IList<string>;
+    wrappers.Remove(wrappers.SingleOrDefault(x => x == "Widget_Wrapper"));
+
+    // Now, let's get a handle to the widget description, containing the title
+    var widgetPart = Model.ContentItem.WidgetPart;
+}
+
+<section class="widget">
+    <div class="widget-inner">
+        <div class="box-header-inverted">@Display(widgetPart.Title)</div>
+        @* render the fancy striped box *@
+        <div class="fancy-outline-wrapper">
+            <div class="fancy-outline-header"></div>
+            <div class="entry-content fancy-outline-content" style="word-wrap: break-word;"></div>
+        </div>
+        @Display(Model.Content)
+    </div>
+</section>
