@@ -1,4 +1,4 @@
-Name: KoLiber.Needle
+Name: KoLiber.Theme.Needle
 Author: Tomasz Malinowski
 Website: http://KoLiber.org
 Description: Base theme for KoLiber.org. Originally designed by Miłosz Lodowski and implemented by Mateusz Kwapich. Ported from Wordpress by Tomasz Malinowski.
