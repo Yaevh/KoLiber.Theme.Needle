@@ -72,6 +72,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\img\border-inverted.gif" />
+    <Content Include="Content\img\border.png" />
+    <Content Include="Content\img\empty.gif" />
+    <Content Include="Content\img\head-inverted.gif" />
+    <Content Include="Content\img\head.png" />
+    <Content Include="Content\img\header-cont-inverted.png" />
+    <Content Include="Content\img\header-cont.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\pp-inverted.gif" />
+    <Content Include="Content\img\sl-inverted.gif" />
+    <Content Include="Content\img\social\fb.png" />
+    <Content Include="Content\img\social\twitter.png" />
+    <Content Include="Content\img\social\youtube.png" />
+    <Content Include="Content\img\wrapper1.gif" />
+    <Content Include="Content\img\wrapper2.gif" />
     <Content Include="packages.config" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
