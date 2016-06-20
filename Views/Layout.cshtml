@@ -56,263 +56,37 @@
 }
 @tag.StartElement
 
-    <header class="banner" role="banner">
-        <div class="container">
-            @*<div class="row">
-                <div class="col-xs-7 col-sm-9">
-                    <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="http://koliber.org/">
-                        <div class="banner-logo">
-                        </div>
+<header class="banner" role="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-7 col-sm-9">
+                <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="http://koliber.org/">
+                    <div class="banner-logo">
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-5 col-sm-3">
+                <div class="btn-group top-buttons alignright">
+                    <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" class="btn btn-header" href="http://koliber.org/EN">EN</a><a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" class="btn btn-header" href="http://koliber.org/DE">DE</a>                    <a data-slimstat-async="false" data-slimstat-callback="true" data-slimstat-tracking="true" data-slimstat-type="0" data-slimstat-clicked="false" class="btn-social" href="https://www.youtube.com/user/KoLiberTV">
+                        <img src="DI_KoLiber_files/youtube.png" alt="YouTube">
+                    </a><a data-slimstat-async="false" data-slimstat-callback="true" data-slimstat-tracking="true" data-slimstat-type="0" data-slimstat-clicked="false" class="btn-social" href="https://twitter.com/KoLiber_org">
+                        <img src="DI_KoLiber_files/twitter.png" alt="twitter">
+                    </a><a data-slimstat-async="false" data-slimstat-callback="true" data-slimstat-tracking="true" data-slimstat-type="0" data-slimstat-clicked="false" class="btn-social" href="https://www.facebook.com/stowarzyszeniekoliber"><img src="DI_KoLiber_files/fb.png" alt="facebook"></a><a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" class="btn btn-primary" href="http://koliber.org/wp-admin">
+                        <span class="glyphicon glyphicon-log-in"></span> login
                     </a>
                 </div>
-                <div class="col-xs-5 col-sm-3">
-                    <div class="btn-group top-buttons alignright">
-                        <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" class="btn btn-header" href="http://koliber.org/EN">EN</a><a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" class="btn btn-header" href="http://koliber.org/DE">DE</a>                    <a data-slimstat-async="false" data-slimstat-callback="true" data-slimstat-tracking="true" data-slimstat-type="0" data-slimstat-clicked="false" class="btn-social" href="https://www.youtube.com/user/KoLiberTV">
-                            <img src="DI_KoLiber_files/youtube.png" alt="YouTube">
-                        </a><a data-slimstat-async="false" data-slimstat-callback="true" data-slimstat-tracking="true" data-slimstat-type="0" data-slimstat-clicked="false" class="btn-social" href="https://twitter.com/KoLiber_org">
-                            <img src="DI_KoLiber_files/twitter.png" alt="twitter">
-                        </a><a data-slimstat-async="false" data-slimstat-callback="true" data-slimstat-tracking="true" data-slimstat-type="0" data-slimstat-clicked="false" class="btn-social" href="https://www.facebook.com/stowarzyszeniekoliber"><img src="DI_KoLiber_files/fb.png" alt="facebook"></a><a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" class="btn btn-primary" href="http://koliber.org/wp-admin">
-                            <span class="glyphicon glyphicon-log-in"></span> login
-                        </a>
-                    </div>
-                    <div class="beta">
-                        wersja beta
-                    </div>
-                    <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" class="btn btn-header-join" href="http://koliber.org/join/">Dołącz do nas!</a>
+                <div class="beta">
+                    wersja beta
                 </div>
-            </div>*@
-
-            @*@if (Model.Banner != null)
-            {
-                <div class="row">
-                    @Zone(Model.Banner)
-                </div>
-            }*@
-
-            @if (Model.Navigation != null)
-            {
-                <div class="navbar navbar-default navbar-static-top affix" data-spy="affix" data-offset-top="100">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" class="navbar-brand" href="@WorkContext.CurrentSite.BaseUrl">
-                            <span class="glyphicon glyphicon-home"></span>
-                            <span class="visible-inline-xs">&nbsp;&nbsp;@WorkContext.CurrentSite.SiteName</span>
-                        </a>
-                    </div>
-                    <nav class="collapse navbar-collapse" role="navigation">
-                        @Zone(Model.Navigation)
-                    </nav>
-                </div>
-            }
-        </div>
-    </header>
-
-    @*@if (Model.Featured != null) {
-        <div id="layout-featured" class="group">
-            @Zone(Model.Featured)
-        </div>
-    }
-    @if (Model.BeforeMain != null) {
-        <div id="layout-before-main" class="group">
-            @Zone(Model.BeforeMain)
-        </div>
-    }*@
-
-    <div id="wrap container layout-main-container">
-        <div id="layout-main content row" class="group">
-            @*@if (Model.AsideFirst != null) {
-                <aside id="aside-first" class="aside-first group col-lg-2">
-                    @Zone(Model.AsideFirst)
-                </aside>
-            }*@
-            <div id="layout-content" class="col-lg-8">
-                @if (Model.Messages != null) {
-                    <div id="messages">
-                        @Zone(Model.Messages)
-                    </div>
-                }
-                @if (Model.BeforeContent != null) {
-                    <div id="before-content">
-                        @Zone(Model.BeforeContent)
-                    </div>
-                }
-                @* the model content for the page is in the Content zone @ the default position (nothing, zero, zilch) *@
-                @if (Model.Content != null) {
-                    <div id="content" class="row">
-                        <div class="fancy-outline-wrapper">
-                            <div class="entry-content fancy-outline-content">
-                                @Zone(Model.Content)
-                            </div>
-                        </div>
-                    </div>
-                }
-                @if (Model.AfterContent != null) {
-                    <div id="after-content">
-                        @Zone(Model.AfterContent)
-                    </div>
-                }
+                <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" class="btn btn-header-join" href="http://koliber.org/join/">Dołącz do nas!</a>
             </div>
-            @if (Model.AsideSecond != null)
-            {
-                <aside id="aside-second" class="aside-second col-lg-2 sidebar" role="complementary">
-                    @Zone(Model.AsideSecond)
-                    <section class="widget koliber_newsletter_widget-2 widget_koliber_newsletter_widget">
-                        <div class="widget-inner">
-                            <div class="box-header-inverted">Zapisz się na biuletyn!</div>
-                            <div class="fancy-outline-wrapper">
-                                <div class="fancy-outline-header"></div>
-                                <div class="entry-content fancy-outline-content" style="word-wrap: break-word;"></div>
-                            </div>
-                            <form action="http://it.koliber.org/index.php?page=CiviCRM&amp;q=civicrm/profile/create&amp;gid=13&amp;reset=1" method="post" name="Edit" id="Edit">
-                                <!--ID grupy sympatyków-->
-                                <input name="add_to_group" value="3" type="hidden">
-                                <!--ID grupy sympatyków-->
-                                <input name="postURL" value="http://koliber.org/biuletyn/" type="hidden">
-                                <input name="_qf_default" value="Edit:cancel" type="hidden">
-                                <input name="group[3]" value="" type="hidden">
-                                <input skiplabel="1" id="group_3" name="group[3]" value="1" class="form-checkbox" type="hidden">
-                                <div style="text-align: center">
-                                    <input name="email-Primary" id="email-Primary" class="form-text medium required" placeholder=" ADRES E-MAIL" style="width: 90%;" type="text"><br><input name="first_name" id="first_name" class="form-text big required" placeholder=" IMIĘ" style="width: 45%;" type="text"><input name="last_name" id="last_name" class="form-text big required" placeholder=" NAZWISKO" style="width: 45%;" type="text"><br><input class="btn btn-primary" accesskey="S" name="_qf_Edit_next" value="ZAPISZ SIĘ" id="_qf_Edit_next" style="width: 90%;" type="submit">
-                                </div>
-                            </form>
-                        </div>
-                    </section>
-                    <section class="widget koliber_dotpay_widget-2 widget_koliber_dotpay_widget">
-                        <div class="widget-inner">
-                            <div class="box-header-inverted">Wspomóż nas!</div>
-                            <div class="fancy-outline-wrapper">
-                                <div class="fancy-outline-header"></div>
-                                <div class="entry-content fancy-outline-content" style="word-wrap: break-word;"></div>
-                            </div>
-                                
-                            <form action="https://ssl.dotpay.pl/" method="post" id="dotpay-top" class="hidden">
-                                <input name="id" value="48026" type="hidden">
-                                <input name="URL" value="https://koliber.org/dziekujemy" type="hidden">
-                                <input name="opis" value="Darowizna na cele statutowe. " type="hidden">
-                                <input name="kwota" id="kwota-top" value="0.00" type="hidden">
-                            </form>
-                            <div style="text-align: center">
-                                    
-                                <br>
-                                <input name="kwota" id="kwota_custom" placeholder="Inna kwota" style="height:36px; width:61%" type="text">
-                                    
-                                <br>
-                                Stowarzyszenie KoLiber
-                                <br>
-                                VWBank 23 2130 0004 2001 0204 6274 0001
-                            </div>
-                        </div>
-                    </section>
-                    <section class="widget facebook_events_widget-2 widget_Facebook_Events_Widget">
-                        <div class="widget-inner">
-                            <div class="box-header-inverted">Wydarzenia</div>
-                            <div class="fancy-outline-wrapper">
-                                <div class="fancy-outline-header"></div>
-                                <div class="entry-content fancy-outline-content" style="word-wrap: break-word;"></div>
-                            </div>
-                            <strong>ERROR:</strong>
-                            Error validating access token: Session does not match current stored
-                            session. This may be because the user changed the password since the
-                            time the session was created or Facebook has changed the session for
-                            security reasons.
-                            <div class="fb-events-container">
-                                <div class="fb-event">
-                                    <div class="fb-event-description">There are no events</div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="widget facebook-like-box-2 widget_facebook-like-box">
-                        <div class="widget-inner">
-                            <div class="box-header-inverted">Facebook</div>
-                            <div class="fancy-outline-wrapper">
-                                <div class="fancy-outline-header"></div>
-                                <div class="entry-content fancy-outline-content" style="word-wrap: break-word;"></div>
-                            </div>
-                            <div fb-iframe-plugin-query="app_id=179030175536259&amp;color_scheme=dark&amp;container_width=263&amp;header=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fstowarzyszeniekoliber&amp;locale=pl_PL&amp;sdk=joey&amp;show_border=false&amp;show_faces=true&amp;stream=false&amp;width=292" fb-xfbml-state="rendered" class="fb-social-plugin fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/stowarzyszeniekoliber" data-width="292" data-colorscheme="dark" data-show-faces="true" data-stream="false" data-header="false" data-show-border="false"><span style="vertical-align: bottom; width: 292px; height: 214px;"><iframe class="" src="http://www.facebook.com/plugins/like_box.php?app_id=179030175536259&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df213e1827c23ea6%26domain%3Dkoliber.org%26origin%3Dhttp%253A%252F%252Fkoliber.org%252Ff1e3d1a797c4588%26relation%3Dparent.parent&amp;color_scheme=dark&amp;container_width=263&amp;header=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fstowarzyszeniekoliber&amp;locale=pl_PL&amp;sdk=joey&amp;show_border=false&amp;show_faces=true&amp;stream=false&amp;width=292" style="border: medium none; visibility: visible; width: 292px; height: 214px;" title="fb:like_box Facebook Social Plugin" scrolling="no" allowfullscreen="true" allowtransparency="true" name="f2acd49d388f474" width="292px" frameborder="0" height="1000px"></iframe></span></div>
-                        </div>
-                    </section>
-                    <section class="widget text-3 widget_text">
-                        <div class="widget-inner">
-                            <div class="box-header-inverted">Raport Brukselski</div>
-                            <div class="fancy-outline-wrapper">
-                                <div class="fancy-outline-header"></div>
-                                <div class="entry-content fancy-outline-content" style="word-wrap: break-word;"></div>
-                            </div>
-                            <div class="textwidget">
-                                <div style="padding:5px"><a data-slimstat-async="false" data-slimstat-callback="true" data-slimstat-tracking="true" data-slimstat-type="0" data-slimstat-clicked="false" href="http://raportbrukselski.pl/">Zapraszamy do obejrzenia filmu <strong>"Hołd Brukselski, czyli jak w dziesięć lat stracić suwerenność"</strong>, będącego częścią projektu "Raport Brukselski KoLibra".</a></div>
-                            </div>
-                        </div>
-                    </section>
-                </aside>
-            }
         </div>
+
+        @if (Model.Navigation != null) {
+            @Zone(Model.Navigation)
+        }
     </div>
-
-    @if (Model.AfterMain != null) {
-        <div id="layout-after-main" class="group">
-            @Zone(Model.AfterMain)
-        </div>
-    }
-    @if (Model.TripelFirst != null || Model.TripelSecond != null || Model.TripelThird != null) {
-        <div id="layout-tripel-container">
-            <div id="layout-tripel" class="group">@* as in beer *@
-                @if (Model.TripelFirst != null) {
-                    <div id="tripel-first">
-                        @Zone(Model.TripelFirst)
-                    </div>
-                }
-                @if (Model.TripelSecond != null) {
-                    <div id="tripel-second">
-                        @Zone(Model.TripelSecond)
-                    </div>
-                }
-                @if (Model.TripelThird != null) {
-                    <div id="tripel-third">
-                        @Zone(Model.TripelThird)
-                    </div>
-                }
-            </div>
-        </div>
-    }
-    <div id="layout-footer" class="group">
-        <footer id="footer">
-            <div id="footer-quad" class="group">
-                @if (Model.FooterQuadFirst != null) {
-                    <div id="footer-quad-first">
-                        @Zone(Model.FooterQuadFirst)
-                    </div>
-                }
-                @if (Model.FooterQuadSecond != null) {
-                    <div id="footer-quad-second">
-                        @Zone(Model.FooterQuadSecond)
-                    </div>
-                }
-                @if (Model.FooterQuadThird != null) {
-                    <div id="footer-quad-third">
-                        @Zone(Model.FooterQuadThird)
-                    </div>
-                }
-                @if (Model.FooterQuadFourth != null) {
-                    <div id="footer-quad-fourth">
-                        @Zone(Model.FooterQuadFourth)
-                    </div>
-                }
-            </div>
-            @if(Model.Footer != null) {
-                <div id="footer-sig" class="group">
-                    @Zone(Model.Footer)
-                </div>
-            }
-        </footer>
-    </div>
-@tag.EndElement
-
+</header>
 <div class="wrap container" role="document">
     <div class="content row">
         <div class="main col-sm-9" role="main">
@@ -335,96 +109,7 @@
                             </header>
                         </div>
                         <div class="entry-content fancy-outline-content">
-                            <p>
-                                Stowarzyszenie Konserwatywno-Liberalne KoLiber jest organizacją
-                                młodych Polaków, których łączy wyznawany system wartości, określany
-                                mianem konserwatywnego liberalizmu. Uważamy, że wcielanie tych wartości w
-                                życie prowadzić będzie zarówno do wzrostu powszechnego dobrobytu
-                                ekonomicznego, jak i do wzmocnienia więzi społecznych oraz odbudowy
-                                moralnych podstaw naszej cywilizacji. W naszej działalności dążyć
-                                będziemy do:
-                            </p>
-                            <p><strong>Realizacji idei wolnego społeczeństwa</strong></p>
-                            <p>
-                                Uważamy, że podstawowym podmiotem jest jednostka, a nie
-                                społeczeństwo. Dlatego najwyższą wartością jest dla nas dobro osoby
-                                ludzkiej stanowiącej fundament wszelkich instytucji społecznych i
-                                politycznych. W naszym przekonaniu wolność jest wartością nadrzędną
-                                wobec równości; wszelkie próby systemowego zniesienia naturalnych
-                                nierówności wynikających z istoty natury ludzkiej są skazane na
-                                niepowodzenie. Dlatego będziemy piętnować wszelkie systemy polityczne
-                                wprowadzające reformy socjalne oparte na przymusowej redystrybucji
-                                dochodu narodowego. Uważamy jednak, że stosunkami społecznymi musi
-                                kierować etyka, a wolność powinna wiązać się z odpowiedzialnością za
-                                własny los.
-                            </p>
-                            <p><strong>Całkowitego poddania gospodarki mechanizmom rynkowym</strong></p>
-                            <p>
-                                Jesteśmy przekonani, że powrót do kapitalizmu w czystej formie jest
-                                jedyną drogą do osiągnięcia trwałego dobrobytu i szybkiego wzrostu
-                                gospodarczego. Koniecznym warunkiem jest jednak całkowita neutralność
-                                państwa oraz zniesienie barier prawnych zamykających dostęp do rynku,
-                                hamujących przedsiębiorczość i inicjatywę.
-                            </p>
-                            <p><strong>Obrony suwerenności państwowej</strong></p>
-                            <p>
-                                Jesteśmy przeświadczeni, że tysiącletnia historia Narodu Polskiego
-                                wraz z jego głęboko zakorzenionymi niepodległościowymi tradycjami
-                                stanowi wystarczającą legitymację dla istnienia w pełni suwerennego
-                                Państwa Polskiego. Dlatego uznajemy za święte prawo Narodu Polskiego do
-                                samostanowienia. W szczególności będziemy przeciwdziałać narzucaniu
-                                Państwu Polskiemu polityki zagranicznej, gospodarczej, wewnętrznej i
-                                wojskowej przez podmioty zewnętrzne.
-                            </p>
-                            <p><strong>Stworzenia „silnego państwa minimum”</strong></p>
-                            <p>
-                                Uważamy, że rola państwa sprowadzać się powinna jedynie do
-                                zapewnienia obywatelom bezpieczeństwa zewnętrznego i wewnętrznego,
-                                tworzenia prawa oraz jego egzekwowania. Będziemy dążyć do ustanowienia
-                                rządów Prawa opartych na założeniu, że wszyscy są wobec niego równi.
-                                Uważamy, że w naszym kręgu cywilizacyjnym Prawo powinno opierać się na
-                                etyce chrześcijańskiej oraz tradycji prawa rzymskiego; powinno
-                                gwarantować bezwarunkową ochronę własności prywatnej, nietykalność
-                                osobistą, swobodę działania oraz wolność słowa.
-                            </p>
-                            <p><strong>Rozwoju samorządności</strong></p>
-                            <p>
-                                Jesteśmy przekonani, że zdecydowana większość kompetencji, które
-                                obecnie należą do scentralizowanego aparatu państwowego powinna zostać
-                                przekazana społeczeństwu. Dlatego należy wspierać wszelkie oddolne formy
-                                organizacji życia społecznego. Jedynie sprawnie działające samorządy
-                                będą w stanie podołać nowym zadaniom.
-                            </p>
-                            <p><strong>Poszanowania tradycji i historii</strong></p>
-                            <p>
-                                Uważamy, że wspólna tradycja jest czynnikiem scalającym społeczeństwo
-                                oraz wytwarzającym poczucie jedności narodowej. Dlatego będziemy
-                                kultywować tradycję rodzinną, narodową, cywilizacyjną. Widzimy
-                                konieczność utrzymania ciągłości z przeszłością. Będziemy przeciwstawiać
-                                się wszelkim przejawom rewolucjonizmu tkwiącego w systemach
-                                politycznych. W szczególności w całości odrzucamy spuściznę komunizmu;
-                                jesteśmy także zdecydowanie przeciwko bezwzględnej władzy większości.
-                            </p>
-                            <p><strong>Uznania szczególnej roli Rodziny</strong></p>
-                            <p>
-                                Rodzina jest podstawową instytucją społeczną – w niej człowiek
-                                dojrzewa emocjonalnie i rozwija swój kodeks moralny. Sądzimy zatem, że
-                                symptomy rozkładu rodziny są bardzo niebezpieczne dla kondycji całego
-                                społeczeństwa. Dlatego będziemy bronić tradycyjnego modelu rodziny. Za
-                                niepodważalne uważamy prawo rodziców do wychowania dzieci według
-                                własnych przekonań i światopoglądu. Podstawowym celem Stowarzyszenia
-                                Konserwatywno-Liberalnego KoLiber jest wykształcenie elit, które w
-                                przyszłości współtworzyć będą społeczny, gospodarczy, kulturowy i
-                                polityczny obraz III Rzeczypospolitej poprzez czynny udział w życiu
-                                publicznym. Nasze założenia będziemy realizować poprzez działalność
-                                edukacyjną, publicystyczną i wydawniczą, organizację i współudział w
-                                akcjach charytatywnych, prezentowanie się w mediach. Zamierzamy także
-                                współpracować z organizacjami polskimi i zagranicznymi o podobnych
-                                zapatrywaniach. Jednocześnie zamierzamy zdobywać praktyczne
-                                doświadczenie poprzez pracę w samorządach szkolnych, środowiskowych oraz
-                                lokalnych.
-                            </p>
-                            <p>&nbsp;</p>
+                            @Zone(Model.Content)
                         </div>
                     </div>
                     <footer></footer>
@@ -433,6 +118,107 @@
         </div>
         <!-- /.main -->
         <aside class="sidebar col-sm-3" role="complementary">
+            <section class="widget koliber_newsletter_widget-2 widget_koliber_newsletter_widget">
+                <div class="widget-inner">
+                    <div class="box-header-inverted">Zapisz się na biuletyn!</div>
+                    <div class="fancy-outline-wrapper">
+                        <div class="fancy-outline-header"></div>
+                        <div class="entry-content fancy-outline-content" style="word-wrap: break-word;"></div>
+                    </div>
+                    <form action="http://it.koliber.org/index.php?page=CiviCRM&amp;q=civicrm/profile/create&amp;gid=13&amp;reset=1" method="post" name="Edit" id="Edit">
+                        <!--ID grupy sympatyków-->
+                        <input name="add_to_group" value="3" type="hidden">
+                        <!--ID grupy sympatyków-->
+                        <input name="postURL" value="http://koliber.org/biuletyn/" type="hidden">
+                        <input name="_qf_default" value="Edit:cancel" type="hidden">
+                        <input name="group[3]" value="" type="hidden">
+                        <input skiplabel="1" id="group_3" name="group[3]" value="1" class="form-checkbox" type="hidden">
+                        <div style="text-align: center">
+                            <input name="email-Primary" id="email-Primary" class="form-text medium required" placeholder=" ADRES E-MAIL" style="width: 90%;" type="text"><br><input name="first_name" id="first_name" class="form-text big required" placeholder=" IMIĘ" style="width: 45%;" type="text"><input name="last_name" id="last_name" class="form-text big required" placeholder=" NAZWISKO" style="width: 45%;" type="text"><br><input class="btn btn-primary" accesskey="S" name="_qf_Edit_next" value="ZAPISZ SIĘ" id="_qf_Edit_next" style="width: 90%;" type="submit">
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="widget koliber_dotpay_widget-2 widget_koliber_dotpay_widget">
+                <div class="widget-inner">
+                    <div class="box-header-inverted">Wspomóż nas!</div>
+                    <div class="fancy-outline-wrapper">
+                        <div class="fancy-outline-header"></div>
+                        <div class="entry-content fancy-outline-content" style="word-wrap: break-word;"></div>
+                    </div>
+                    <script type="text/javascript">
+                                function daruj(kwota) {
+                                    if (kwota == 0.0) {
+                                        kwota = Number(document.getElementById('kwota_custom').value);
+                                        if (kwota == '' || kwota == 0 || isNaN(kwota))
+                                            kwota = 1;
+                                    }
+                                    form = document.forms['dotpay-top'];
+                                    form.elements['kwota'].value = kwota;
+                                    form.submit();
+                                }
+                    </script>
+                    <form action="https://ssl.dotpay.pl/" method="post" id="dotpay-top" class="hidden">
+                        <input name="id" value="48026" type="hidden">
+                        <input name="URL" value="https://koliber.org/dziekujemy" type="hidden">
+                        <input name="opis" value="Darowizna na cele statutowe. " type="hidden">
+                        <input name="kwota" id="kwota-top" value="0.00" type="hidden">
+                    </form>
+                    <div style="text-align: center">
+                        <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="javascript:daruj('10.00');" class="btn btn-primary" style="width:30%;">10 zł</a>
+                        <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="javascript:daruj('30.00');" class="btn btn-primary" style="width:30%;">30 zł</a>
+                        <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="javascript:daruj('50.00');" class="btn btn-primary" style="width:30%;">50 zł</a>
+                        <br>
+                        <input name="kwota" id="kwota_custom" placeholder="Inna kwota" style="height:36px; width:61%" type="text">
+                        <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="javascript:daruj('0.0');" class="btn btn-primary" style="width:30%;">Wpłać</a>
+                        <br>
+                        Stowarzyszenie KoLiber
+                        <br>
+                        VWBank 23 2130 0004 2001 0204 6274 0001
+                    </div>
+                </div>
+            </section>
+            <section class="widget facebook_events_widget-2 widget_Facebook_Events_Widget">
+                <div class="widget-inner">
+                    <div class="box-header-inverted">Wydarzenia</div>
+                    <div class="fancy-outline-wrapper">
+                        <div class="fancy-outline-header"></div>
+                        <div class="entry-content fancy-outline-content" style="word-wrap: break-word;"></div>
+                    </div>
+                    <strong>ERROR:</strong>
+                    Error validating access token: Session does not match current stored
+                    session. This may be because the user changed the password since the
+                    time the session was created or Facebook has changed the session for
+                    security reasons.
+                    <div class="fb-events-container">
+                        <div class="fb-event">
+                            <div class="fb-event-description">There are no events</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="widget facebook-like-box-2 widget_facebook-like-box">
+                <div class="widget-inner">
+                    <div class="box-header-inverted">Facebook</div>
+                    <div class="fancy-outline-wrapper">
+                        <div class="fancy-outline-header"></div>
+                        <div class="entry-content fancy-outline-content" style="word-wrap: break-word;"></div>
+                    </div>
+                    <div fb-iframe-plugin-query="app_id=179030175536259&amp;color_scheme=dark&amp;container_width=263&amp;header=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fstowarzyszeniekoliber&amp;locale=pl_PL&amp;sdk=joey&amp;show_border=false&amp;show_faces=true&amp;stream=false&amp;width=292" fb-xfbml-state="rendered" class="fb-social-plugin fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/stowarzyszeniekoliber" data-width="292" data-colorscheme="dark" data-show-faces="true" data-stream="false" data-header="false" data-show-border="false"><span style="vertical-align: bottom; width: 292px; height: 214px;"><iframe class="" src="http://www.facebook.com/plugins/like_box.php?app_id=179030175536259&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df213e1827c23ea6%26domain%3Dkoliber.org%26origin%3Dhttp%253A%252F%252Fkoliber.org%252Ff1e3d1a797c4588%26relation%3Dparent.parent&amp;color_scheme=dark&amp;container_width=263&amp;header=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fstowarzyszeniekoliber&amp;locale=pl_PL&amp;sdk=joey&amp;show_border=false&amp;show_faces=true&amp;stream=false&amp;width=292" style="border: medium none; visibility: visible; width: 292px; height: 214px;" title="fb:like_box Facebook Social Plugin" scrolling="no" allowfullscreen="true" allowtransparency="true" name="f2acd49d388f474" width="292px" frameborder="0" height="1000px"></iframe></span></div>
+                </div>
+            </section>
+            <section class="widget text-3 widget_text">
+                <div class="widget-inner">
+                    <div class="box-header-inverted">Raport Brukselski</div>
+                    <div class="fancy-outline-wrapper">
+                        <div class="fancy-outline-header"></div>
+                        <div class="entry-content fancy-outline-content" style="word-wrap: break-word;"></div>
+                    </div>
+                    <div class="textwidget">
+                        <div style="padding:5px"><a data-slimstat-async="false" data-slimstat-callback="true" data-slimstat-tracking="true" data-slimstat-type="0" data-slimstat-clicked="false" href="http://raportbrukselski.pl/">Zapraszamy do obejrzenia filmu <strong>"Hołd Brukselski, czyli jak w dziesięć lat stracić suwerenność"</strong>, będącego częścią projektu "Raport Brukselski KoLibra".</a></div>
+                    </div>
+                </div>
+            </section>
         </aside>
         <!-- /.sidebar -->
     </div>
@@ -446,3 +232,6 @@
         </div>
     </div>
 </footer>
+
+    
+@tag.EndElement

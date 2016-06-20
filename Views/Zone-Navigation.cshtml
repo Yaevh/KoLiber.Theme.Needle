@@ -1,9 +1,10 @@
-@{
+﻿@{
     var tag = Tag(Model, "section");
 }
 
 @tag.StartElement
     <div class="navbar navbar-default navbar-static-top affix" data-spy="affix" data-offset-top="100">
+
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -17,7 +18,19 @@
             </a>
         </div>
 
-        @DisplayChildren(Model)
+        @*<nav class="collapse navbar-collapse" role="navigation">
+            <ul id="menu-primary-navigation" class="nav navbar-nav">
+                <li class="menu-o-nas"><a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="http://koliber.org/o-nas/">O nas</a></li>
+                <li class="menu-nasze-dzialania"><a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="http://koliber.org/dzialania/">Nasze działania</a></li>
+                <li class="menu-nasze-struktury"><a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="http://koliber.org/struktury/">Nasze struktury</a></li>
+                <li class="menu-kontakt"><a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="http://koliber.org/kontakt/">Kontakt</a></li>
+                <li class="menu-wesprzyj-nas"><a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="http://koliber.org/wsparcie/">Wesprzyj nas!</a></li>
+            </ul>
+        </nav>*@
+
+        <nav class="collapse navbar-collapse" role="navigation">
+            @DisplayChildren(Model)
+        </nav>
 
     </div>
 @tag.EndElement
