@@ -209,6 +209,7 @@
     <Content Include="Views\Zone-AsideSecond.cshtml" />
     <Content Include="Views\Zone-Navigation.cshtml" />
     <Content Include="Views\Parts\MenuWidget.cshtml" />
+    <Content Include="Views\Content.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,67 @@
+﻿@using Orchard.Utility.Extensions;
+@{
+    if (Model.Title != null) {
+        Layout.Title = Model.Title;
+    }
+
+    Model.Classes.Add("content-item");
+    Model.Classes.Add("col-sm-9");
+    Model.Attributes.Add("role", "main");
+
+    var contentTypeClassName = ((string)Model.ContentItem.ContentType).HtmlClassify();
+    Model.Classes.Add(contentTypeClassName);
+
+    var tag = Tag(Model, "article");
+}
+@*@tag.StartElement
+    <header>
+        @Display(Model.Header)
+        @if (Model.Meta != null) {
+            <div class="metadata">
+                @Display(Model.Meta)
+            </div>
+        }
+    </header>
+    @Display(Model.Content)
+    @if(Model.Footer != null) {
+        <footer>
+            @Display(Model.Footer)
+        </footer>
+    }
+@tag.EndElement*@
+
+
+@tag.StartElement
+
+    <header class="col-sm-12">
+        <div class="box-header">
+            <h2 style="word-wrap: break-word;" class="entry-title">
+                Deklaracja Ideowa
+            </h2>
+        </div>
+        @*@Display(Model.Header)
+        @if (Model.Meta != null) {
+            <div class="metadata">
+                @Display(Model.Meta)
+            </div>
+        }*@
+    </header>
+
+    <div class="row">
+        <div class="post-40 page type-page status-publish has-post-thumbnail hentry col-sm-12">
+            <img src="htpp://koliber.org/files/KoLiberek.png" class="attachment-full-header wp-post-image" alt="KoLiberek" width="649" height="336">
+            <div class="fancy-outline-wrapper">
+                <div class="fancy-outline-header">
+                    <header>
+                        <h2 style="word-wrap: break-word; white-space: normal;" class="entry-title"><a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="http://koliber.org/deklaracja-ideowa/">Deklaracja Ideowa</a></h2>
+                    </header>
+                </div>
+                <div class="entry-content fancy-outline-content">
+                    @Display(Model.Content)
+                </div>
+            </div>
+            <footer></footer>
+        </div>
+    </div>
+
+@tag.EndElement
