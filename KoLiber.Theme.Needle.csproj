@@ -210,6 +210,7 @@
     <Content Include="Views\Zone-Navigation.cshtml" />
     <Content Include="Views\Parts\MenuWidget.cshtml" />
     <Content Include="Views\Content.cshtml" />
+    <Content Include="Views\Parts.Title.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
