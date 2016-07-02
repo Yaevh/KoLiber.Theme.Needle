@@ -2,7 +2,7 @@
     // To support the layout classifaction below. Implementing as a razor function because we can, could otherwise be a Func<string[], string, string> in the code block following.
     string CalcuClassify(string[] zoneNames, string classNamePrefix) {
         var zoneCounter = 0;
-        var zoneNumsFilled = string.Join("", zoneNames.Select(zoneName => { ++zoneCounter; return Model[zoneName] != null ? zoneCounter.ToString() : "";}).ToArray());
+        var zoneNumsFilled = string.Join("", zoneNames.Select(zoneName => { ++zoneCounter; return Model[zoneName] != null ? zoneCounter.ToString() : ""; }).ToArray());
         return HasText(zoneNumsFilled) ? classNamePrefix + zoneNumsFilled : "";
     }
 }
@@ -22,21 +22,15 @@
 
     /* Layout classification based on filled zones
     ***************************************************************/
-
-    //Add classes to the wrapper div to toggle aside widget zones on and off
-    var asideClass = CalcuClassify(new [] {"AsideFirst", "AsideSecond"}, "aside-"); // for aside-1, aside-2 or aside-12 if any of the aside zones are filled
-    if (HasText(asideClass)) {
-        Model.Classes.Add(asideClass);
-    }
-
+    
     //Add classes to the wrapper div to toggle tripel widget zones on and off
-    var tripelClass = CalcuClassify(new [] {"TripelFirst", "TripelSecond", "TripelThird"}, "tripel-"); // for tripel-1, triple-2, etc. if any of the tripel zones are filled
+    var tripelClass = CalcuClassify(new[] { "TripelFirst", "TripelSecond", "TripelThird" }, "tripel-"); // for tripel-1, triple-2, etc. if any of the tripel zones are filled
     if (HasText(tripelClass)) {
         Model.Classes.Add(tripelClass);
     }
 
     //Add classes to the wrapper div to toggle quad widget zones on and off
-    var footerQuadClass = CalcuClassify(new [] {"FooterQuadFirst", "FooterQuadSecond", "FooterQuadThird", "FooterQuadFourth"}, "split-"); // for quad-1, quad-2, etc. if any of the quad zones are filled
+    var footerQuadClass = CalcuClassify(new[] { "FooterQuadFirst", "FooterQuadSecond", "FooterQuadThird", "FooterQuadFourth" }, "split-"); // for quad-1, quad-2, etc. if any of the quad zones are filled
     if (HasText(footerQuadClass)) {
         Model.Classes.Add(footerQuadClass);
     }
@@ -60,32 +54,32 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-7 col-sm-9">
-                <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="http://koliber.org/">
+                <a href="http://koliber.org/">
                     <div class="banner-logo">
                     </div>
                 </a>
             </div>
             <div class="col-xs-5 col-sm-3">
                 <div class="btn-group top-buttons alignright">
-                    <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" class="btn btn-header" href="http://koliber.org/EN">EN</a>
-                    <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" class="btn btn-header" href="http://koliber.org/DE">DE</a>
-                    <a data-slimstat-async="false" data-slimstat-callback="true" data-slimstat-tracking="true" data-slimstat-type="0" data-slimstat-clicked="false" class="btn-social" href="https://www.youtube.com/user/KoLiberTV">
+                    <a class="btn btn-header" href="http://koliber.org/EN">EN</a>
+                    <a class="btn btn-header" href="http://koliber.org/DE">DE</a>
+                    <a class="btn-social" href="https://www.youtube.com/user/KoLiberTV">
                         @Html.Image(Html.ThemePath(WorkContext.CurrentTheme, "/Content/img/social/youtube.png"), "YouTube", null)
                     </a>
-                    <a data-slimstat-async="false" data-slimstat-callback="true" data-slimstat-tracking="true" data-slimstat-type="0" data-slimstat-clicked="false" class="btn-social" href="https://twitter.com/KoLiber_org">
+                    <a class="btn-social" href="https://twitter.com/KoLiber_org">
                         @Html.Image(Html.ThemePath(WorkContext.CurrentTheme, "/Content/img/social/twitter.png"), "Twitter", null)
                     </a>
-                    <a data-slimstat-async="false" data-slimstat-callback="true" data-slimstat-tracking="true" data-slimstat-type="0" data-slimstat-clicked="false" class="btn-social" href="https://www.facebook.com/stowarzyszeniekoliber">
+                    <a class="btn-social" href="https://www.facebook.com/stowarzyszeniekoliber">
                         @Html.Image(Html.ThemePath(WorkContext.CurrentTheme, "/Content/img/social/fb.png"), "Facebook", null)
                     </a>
-                    <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" class="btn btn-primary" href="http://koliber.org/wp-admin">
+                    <a class="btn btn-primary" href="http://koliber.org/wp-admin">
                         <span class="glyphicon glyphicon-log-in"></span> login
                     </a>
                 </div>
                 <div class="beta">
                     wersja beta
                 </div>
-                <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" class="btn btn-header-join" href="http://koliber.org/join/">Dołącz do nas!</a>
+                <a class="btn btn-header-join" href="http://koliber.org/join/">Dołącz do nas!</a>
             </div>
         </div>
 
@@ -98,9 +92,13 @@
 
 <div class="wrap container" role="document">
     <div class="content row">
+
         @Zone(Model.Content)
-        <!-- /.main -->
+
         <aside class="sidebar col-sm-3" role="complementary">
+
+            @Zone(Model.SidebarRight)
+
             <section class="widget koliber_newsletter_widget-2 widget_koliber_newsletter_widget">
                 <div class="widget-inner">
                     <div class="box-header-inverted">Zapisz się na biuletyn!</div>
@@ -122,99 +120,22 @@
                     </form>
                 </div>
             </section>
-            <section class="widget koliber_dotpay_widget-2 widget_koliber_dotpay_widget">
-                <div class="widget-inner">
-                    <div class="box-header-inverted">Wspomóż nas!</div>
-                    <div class="fancy-outline-wrapper">
-                        <div class="fancy-outline-header"></div>
-                        <div class="entry-content fancy-outline-content" style="word-wrap: break-word;"></div>
-                    </div>
-                    <script type="text/javascript">
-                                function daruj(kwota) {
-                                    if (kwota == 0.0) {
-                                        kwota = Number(document.getElementById('kwota_custom').value);
-                                        if (kwota == '' || kwota == 0 || isNaN(kwota))
-                                            kwota = 1;
-                                    }
-                                    form = document.forms['dotpay-top'];
-                                    form.elements['kwota'].value = kwota;
-                                    form.submit();
-                                }
-                    </script>
-                    <form action="https://ssl.dotpay.pl/" method="post" id="dotpay-top" class="hidden">
-                        <input name="id" value="48026" type="hidden">
-                        <input name="URL" value="https://koliber.org/dziekujemy" type="hidden">
-                        <input name="opis" value="Darowizna na cele statutowe. " type="hidden">
-                        <input name="kwota" id="kwota-top" value="0.00" type="hidden">
-                    </form>
-                    <div style="text-align: center">
-                        <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="javascript:daruj('10.00');" class="btn btn-primary" style="width:30%;">10 zł</a>
-                        <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="javascript:daruj('30.00');" class="btn btn-primary" style="width:30%;">30 zł</a>
-                        <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="javascript:daruj('50.00');" class="btn btn-primary" style="width:30%;">50 zł</a>
-                        <br>
-                        <input name="kwota" id="kwota_custom" placeholder="Inna kwota" style="height:36px; width:61%" type="text">
-                        <a data-slimstat-async="false" data-slimstat-callback="false" data-slimstat-tracking="false" data-slimstat-type="2" data-slimstat-clicked="false" href="javascript:daruj('0.0');" class="btn btn-primary" style="width:30%;">Wpłać</a>
-                        <br>
-                        Stowarzyszenie KoLiber
-                        <br>
-                        VWBank 23 2130 0004 2001 0204 6274 0001
-                    </div>
-                </div>
-            </section>
-            <section class="widget facebook_events_widget-2 widget_Facebook_Events_Widget">
-                <div class="widget-inner">
-                    <div class="box-header-inverted">Wydarzenia</div>
-                    <div class="fancy-outline-wrapper">
-                        <div class="fancy-outline-header"></div>
-                        <div class="entry-content fancy-outline-content" style="word-wrap: break-word;"></div>
-                    </div>
-                    <strong>ERROR:</strong>
-                    Error validating access token: Session does not match current stored
-                    session. This may be because the user changed the password since the
-                    time the session was created or Facebook has changed the session for
-                    security reasons.
-                    <div class="fb-events-container">
-                        <div class="fb-event">
-                            <div class="fb-event-description">There are no events</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="widget facebook-like-box-2 widget_facebook-like-box">
-                <div class="widget-inner">
-                    <div class="box-header-inverted">Facebook</div>
-                    <div class="fancy-outline-wrapper">
-                        <div class="fancy-outline-header"></div>
-                        <div class="entry-content fancy-outline-content" style="word-wrap: break-word;"></div>
-                    </div>
-                    <div fb-iframe-plugin-query="app_id=179030175536259&amp;color_scheme=dark&amp;container_width=263&amp;header=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fstowarzyszeniekoliber&amp;locale=pl_PL&amp;sdk=joey&amp;show_border=false&amp;show_faces=true&amp;stream=false&amp;width=292" fb-xfbml-state="rendered" class="fb-social-plugin fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/stowarzyszeniekoliber" data-width="292" data-colorscheme="dark" data-show-faces="true" data-stream="false" data-header="false" data-show-border="false"><span style="vertical-align: bottom; width: 292px; height: 214px;"><iframe class="" src="http://www.facebook.com/plugins/like_box.php?app_id=179030175536259&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df213e1827c23ea6%26domain%3Dkoliber.org%26origin%3Dhttp%253A%252F%252Fkoliber.org%252Ff1e3d1a797c4588%26relation%3Dparent.parent&amp;color_scheme=dark&amp;container_width=263&amp;header=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fstowarzyszeniekoliber&amp;locale=pl_PL&amp;sdk=joey&amp;show_border=false&amp;show_faces=true&amp;stream=false&amp;width=292" style="border: medium none; visibility: visible; width: 292px; height: 214px;" title="fb:like_box Facebook Social Plugin" scrolling="no" allowfullscreen="true" allowtransparency="true" name="f2acd49d388f474" width="292px" frameborder="0" height="1000px"></iframe></span></div>
-                </div>
-            </section>
-            <section class="widget text-3 widget_text">
-                <div class="widget-inner">
-                    <div class="box-header-inverted">Raport Brukselski</div>
-                    <div class="fancy-outline-wrapper">
-                        <div class="fancy-outline-header"></div>
-                        <div class="entry-content fancy-outline-content" style="word-wrap: break-word;"></div>
-                    </div>
-                    <div class="textwidget">
-                        <div style="padding:5px"><a data-slimstat-async="false" data-slimstat-callback="true" data-slimstat-tracking="true" data-slimstat-type="0" data-slimstat-clicked="false" href="http://raportbrukselski.pl/">Zapraszamy do obejrzenia filmu <strong>"Hołd Brukselski, czyli jak w dziesięć lat stracić suwerenność"</strong>, będącego częścią projektu "Raport Brukselski KoLibra".</a></div>
-                    </div>
-                </div>
-            </section>
+            
         </aside>
+
+        
         <!-- /.sidebar -->
     </div>
     <!-- /.content -->
 </div>
 <!-- /.wrap -->
 @*<footer class="content-info container" role="contentinfo">
-    <div class="row">
-        <div class="col-lg-12">
-            <p>© 2016 Stowarzyszenie KoLiber</p>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>© 2016 Stowarzyszenie KoLiber</p>
+            </div>
         </div>
-    </div>
-</footer>*@
+    </footer>*@
 
-    
+
 @tag.EndElement
