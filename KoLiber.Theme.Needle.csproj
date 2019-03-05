@@ -25,6 +25,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -88,6 +89,9 @@
     <Content Include="Content\img\wrapper1.gif" />
     <Content Include="Content\img\wrapper2.gif" />
     <Content Include="packages.config" />
+    <Content Include="Assets\main-dark.less" />
+    <Content Include="Assets\main-light.less" />
+    <Content Include="Assets\main.less" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
@@ -163,9 +167,6 @@
     <Content Include="Assets\bootstrap\bootstrap.less" />
     <Content Include="Assets\bootstrap\badges.less" />
     <Content Include="Assets\bootstrap\alerts.less" />
-    <Content Include="Assets\main-dark.less" />
-    <Content Include="Assets\main-light.less" />
-    <Content Include="Assets\main.less" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
